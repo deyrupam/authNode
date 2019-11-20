@@ -7,7 +7,7 @@ const apiRoutes=require('./routes/auth');
 dotenv.config();
 
 mongoose.connect(process.env.DB_CONNECT,{ useNewUrlParser: true },() => 
-console.log('connected to db')
+console.log('connected to db successfully')
 );
 
 
