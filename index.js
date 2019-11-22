@@ -1,4 +1,5 @@
 const express=require('express');
+
 const app=express();
 const mongoose=require('mongoose');
 const dotenv=require('dotenv');
@@ -16,4 +17,4 @@ app.use('/api', apiRoutes);
 
 app.get('/home', (req, res) => res.send('Hello World with Express'));
 
-app.listen(3000,()=>console.log('server running on 3000'));
+app.listen(8000,()=>console.log('server running on 8000'));

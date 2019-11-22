@@ -2,9 +2,25 @@ const router=require('express').Router();
 const User=require('../models/User');
 const auth = require('../middleware/auth')
 
-router.get('/register', (req,res) => {
 
-  // console.log('get request');
+router.get('/register', async(req,res) => {
+
+    // User.find({}, function(err, users) {
+        
+    //     var userMap = {};
+    
+    //         users.forEach(function(user) {
+    //       userMap[user._id] = user;
+    //     });
+    
+    //     res.send(userMap);  
+    //   });
+
+    User.find({}, function(err, users) {
+        res.send({users});
+     });
+
+  
 });
 
 router.post('/register', async(req,res) => {
